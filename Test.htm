@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--
+ *  Copyright (c) 2014 The WebRTC project authors. All Rights Reserved.
+ *
+ *  Use of this source code is governed by a BSD-style license
+ *  that can be found in the LICENSE file in the root of the source
+ *  tree.
+-->
+<html>
+
+<head>
+
+  <title>WebRTC Reference App</title>
+
+  <meta charset="utf-8">
+  <meta name="description" content="WebRTC reference app">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  
+
+  <script type='text/javascript'>window.mod_pagespeed_start = Number(new Date());</script><link rel="canonical" href="https://apprtc.appspot.com/?r=19694544">
+  <style>a:link{color:#fff}a:visited{color:#fff}html,body{background-color:#000;height:100%;font-family:Verdana,Arial,Helvetica,sans-serif}body{margin:0;padding:0}footer{position:absolute;bottom:0;width:100%;height:28px;background-color:#3f3f3f;color:#fff;font-size:13px;font-weight:bold;line-height:28px;text-align:center}#container{background-color:#000;position:absolute;height:100%;width:100%;margin:0px auto;-webkit-perspective:1000}#card{-webkit-transition-duration:.8s;-webkit-transform-style:preserve-3d}#local{position:absolute;width:100%;transform:scale(-1,1);-webkit-transform:scale(-1,1);-webkit-backface-visibility:hidden}#remote{position:absolute;width:100%;-webkit-transform:rotateY(180deg);-webkit-backface-visibility:hidden}#mini{position:absolute;height:30%;width:30%;bottom:32px;right:4px;opacity:1.0;transform:scale(-1,1);-webkit-transform:scale(-1,1)}#localVideo{width:100%;height:100%;opacity:0;-webkit-transition-property:opacity;-webkit-transition-duration:1s}#remoteVideo{width:100%;height:100%;opacity:0;-webkit-transition-property:opacity;-webkit-transition-duration:1s}#miniVideo{width:100%;height:100%;opacity:0;-webkit-transition-property:opacity;-webkit-transition-duration:1s}#hangup{font-size:13px;font-weight:bold;color:#fff;width:128px;height:24px;background-color:gray;border-style:solid;border-color:#fff;margin:2px}#infoDiv{position:absolute;float:right;background-color:gray;margin:2px;display:none}</style>
+
+<link rel="dns-prefetch" href="//1-ps.googleusercontent.com"></head>
+
+<body><noscript><meta HTTP-EQUIV="refresh" content="0;url='https://apprtc.appspot.com/?r=19694544&amp;PageSpeed=noscript'" /><style><!--table,div,span,font,p{display:none} --></style><div style="display:block">Please click <a href="https://apprtc.appspot.com/?r=19694544&amp;PageSpeed=noscript">here</a> if you are not redirected within a few seconds.</div></noscript>
+
+<div id="container" ondblclick="enterFullScreen()" ontouchend="enterFullScreen()">
+  <div id="card">
+    <div id="local">
+      <video id="localVideo" autoplay="autoplay" muted></video>
+    </div>
+    <div id="remote">
+      <!-- Remote video is displayed in the canvas below when stereoscopic
+          rendering is requested (&ssr=true). -->
+      <canvas id="remoteCanvas" style="display: none;"></canvas>
+      <video id="remoteVideo" autoplay="autoplay"></video>
+      <div id="mini">
+        <video id="miniVideo" autoplay="autoplay" muted></video>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer id="status"></footer>
+
+<div id="infoDiv"></div>
+
+<script type="text/javascript" src="/_ah/channel/jsapi"></script>
+<script src="https://1-ps.googleusercontent.com/sx/s.apprtc.appspot.com/apprtc.appspot.com/js/main.js.pagespeed.jm.ljX_hOQ0zo.js"></script>
+
+<!-- Load the polyfill to switch-hit between Chrome and Firefox -->
+<script src="https://1-ps.googleusercontent.com/sx/s.apprtc.appspot.com/apprtc.appspot.com/js/adapter.js.pagespeed.jm.wCFZub0NcS.js"></script>
+
+<script type="text/javascript">var errorMessages=[];var channelToken='AHRlWrplW6d8ZfQATJ2Mj0Skv7XMI19GDG0RmbuEY52O5GFBQndxMGa7GC1VRoIU23-9vLuDWXaDXW-dwLWoG0XTmJr68su-4GjDewtyQFCyBac9ej6RO2g';var me='36044571';var roomKey='19694544';var roomLink='https://apprtc.appspot.com/?r=19694544';var initiator=0;var pcConfig={"iceServers":[{"urls":"stun:stun.l.google.com:19302"}]};var pcConstraints={"optional":[{"googImprovedWifiBwe":true}]};var offerConstraints={"optional":[],"mandatory":{}};var mediaConstraints={"audio":true,"video":true};var turnUrl='https://computeengineondemand.appspot.com/turn?username=36044571&key=4080218913';var stereo=false;var opusfec=true;var audioSendBitrate='';var audioRecvBitrate='';var videoSendBitrate='';var videoRecvBitrate='';var videoSendInitialBitrate='';var stereoscopic='';var audioSendCodec='';var audioRecvCodec='opus/48000';setTimeout(initialize,1);</script>
+
+<script pagespeed_no_defer="">(function(){window.pagespeed=window.pagespeed||{};var l=window.pagespeed;
+l.getResourceTimingData=function(){if(window.performance&&(window.performance.getEntries||window.performance.webkitGetEntries)){for(var m=0,n=0,e=0,p=0,f=0,q=0,g=0,r=0,h=0,s=0,k=0,c={},d=window.performance.getEntries?window.performance.getEntries():window.performance.webkitGetEntries(),b=0;b<d.length;b++){var a=d[b].duration;0<a&&(m+=a,++e,n=Math.max(n,a));a=d[b].connectEnd-d[b].connectStart;0<a&&(q+=a,++g);a=d[b].domainLookupEnd-d[b].domainLookupStart;0<a&&(p+=a,++f);a=d[b].initiatorType;c[a]?++c[a]:
+c[a]=1;a=d[b].requestStart-d[b].fetchStart;0<a&&(s+=a,++k);a=d[b].responseStart-d[b].requestStart;0<a&&(r+=a,++h)}return"&afd="+(e?Math.round(m/e):0)+"&nfd="+e+"&mfd="+Math.round(n)+"&act="+(g?Math.round(q/g):0)+"&nct="+g+"&adt="+(f?Math.round(p/f):0)+"&ndt="+f+"&abt="+(k?Math.round(s/k):0)+"&nbt="+k+"&attfb="+(h?Math.round(r/h):0)+"&nttfb="+h+(c.css?"&rit_css="+c.css:"")+(c.link?"&rit_link="+c.link:"")+(c.script?"&rit_script="+c.script:"")+(c.img?"&rit_img="+c.img:"")}return""};
+l.getResourceTimingData=l.getResourceTimingData;})();
+(function(){window.pagespeed=window.pagespeed||{};var f=window.pagespeed,h=function(e,a,c,b){this.c=e;this.a=a;this.b=c;this.d=b};f.beaconUrl="";
+var k=function(e){var a=e.c,c=window.mod_pagespeed_start,b=Number(new Date)-c,a=a+(-1==a.indexOf("?")?"?":"&"),a=a+"ets="+("load"==e.a?"load:":"unload:"),a=a+b;if("beforeunload"!=e.a||!window.mod_pagespeed_loaded){a+="&r"+e.a+"=";if(window.performance){var b=window.performance.timing,d=b.navigationStart,g=b.requestStart,a=a+(b[e.a+"EventStart"]-d),a=a+("&nav="+(b.fetchStart-d)),a=a+("&dns="+(b.domainLookupEnd-b.domainLookupStart)),a=a+("&connect="+(b.connectEnd-b.connectStart)),a=a+("&req_start="+
+(g-d)),a=a+("&ttfb="+(b.responseStart-g)),a=a+("&dwld="+(b.responseEnd-b.responseStart)),a=a+("&dom_c="+(b.domContentLoadedEventStart-d));window.performance.navigation&&(a+="&nt="+window.performance.navigation.type);d=-1;b.msFirstPaint?d=b.msFirstPaint:window.chrome&&window.chrome.loadTimes&&(d=Math.floor(1E3*window.chrome.loadTimes().firstPaintTime));d=d-g;0<=d&&(a+="&fp="+d)}else a+=b;f.getResourceTimingData&&window.parent==window&&(a+=f.getResourceTimingData());a+=window.parent!=window?"&ifr=1":
+"&ifr=0";"load"==e.a&&(window.mod_pagespeed_loaded=!0,(b=window.mod_pagespeed_num_resources_prefetched)&&(a+="&nrp="+b),(b=window.mod_pagespeed_prefetch_start)&&(a+="&htmlAt="+(c-b)));f.panelLoader&&(c=f.panelLoader.getCsiTimingsString(),""!=c&&(a+="&b_csi="+c));f.criticalCss&&(c=f.criticalCss,a+="&ccis="+c.total_critical_inlined_size+"&cces="+c.total_original_external_size+"&ccos="+c.total_overhead_size+"&ccrl="+c.num_replaced_links+"&ccul="+c.num_unreplaced_links);""!=e.b&&(a+=e.b);document.referrer&&
+(a+="&ref="+encodeURIComponent(document.referrer));a+="&url="+encodeURIComponent(e.d);f.beaconUrl=a;(new Image).src=a}};f.e=function(e,a,c,b){var d=new h(e,a,c,b);window.addEventListener?window.addEventListener(a,function(){k(d)},!1):window.attachEvent("on"+a,function(){k(d)})};f.addInstrumentationInit=f.e;})();
+
+pagespeed.addInstrumentationInit('https://1-ps.googleusercontent.com/beacon?org=121_1_vo', 'load', '&id=1412765134014196', 'https://apprtc.appspot.com/?r=19694544');</script></body>
+</html>
